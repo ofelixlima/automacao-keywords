@@ -14,7 +14,7 @@ for c in range(len(letras)):
         api = requests.get(f"{opcoes[escolha]["endpoint"]}%{letras[c]}")
     sugestoes = api.json()
     if letras[c] == " ":
-        print(f"\nSugestões para {keyword.upper()}:")
+        print(f"\nSugestões EM ALTA sobre {keyword.upper()}:")
     else:
         print(f"\nSugestões para {keyword.upper()} {letras[c].upper()}:")
     for p in range(len(sugestoes[1])):
